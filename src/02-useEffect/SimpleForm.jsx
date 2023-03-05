@@ -18,7 +18,15 @@ export const SimpleForm = () => {
 
     useEffect(() => {
         console.log("useEffect called!!");
-    }, [])
+    }, []);
+
+    useEffect(() => {
+        console.log("formState changed!!");
+    }, [formState]);
+
+    useEffect(() => {
+        console.log("email chainged!!");
+    }, [email]);
 
     return (
         <>
@@ -30,8 +38,8 @@ export const SimpleForm = () => {
                 className="form-control"
                 placeholder="Username"
                 name="username"
-                value={ username }
-                onChange={ handleChange }
+                value={username}
+                onChange={handleChange}
             />
 
             <input
@@ -39,8 +47,8 @@ export const SimpleForm = () => {
                 className="form-control mt-2"
                 placeholder="email@example.com"
                 name="email"
-                value={ email }
-                onChange={ handleChange }
+                value={email}
+                onChange={handleChange}
             />
         </>
     );
